@@ -1,0 +1,82 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.centro{
+    margin-top: 1%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+#piedra{
+    background-color: aqua;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+.juegos1{
+    border: none;
+    transition: all.9s;
+
+}
+.juegos1:hover{
+    transform: scale(1.1);
+}
+#contenido1{
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    width: 130%;
+    color: #fff;
+    background-color: rgb(5, 5, 5);
+}
+.modos{
+    display: flex;
+    gap: 2rem;
+    
+}
+.medio{  
+    border-radius: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    background: linear-gradient(to top, blue,black);
+    display: grid;
+    place-items: center;
+}
+
+   
+
+
+
+#jugador{
+    color: #fff;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+}
+.centro12{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+.user{
+    border-radius:10px ;
+    width: 100%;
+    background: linear-gradient(to top, blue,purple);
+}
+.gamer{
+    width: 50%;
+    background-color: none;
+    border: solid 1px linear-gradient(to top, blue,purple) ;
+}
+#modo{
+    background: linear-gradient(to top,white ,yellow);
+    margin-top: 4%;
+    width:7% ;
+}
+#modo1{
+    background: linear-gradient(to top, black,gray);
+    margin-top: 4%;
+    width:7% ;
+}

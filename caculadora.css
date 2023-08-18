@@ -1,0 +1,40 @@
+/* Estilos para el contenedor principal */
+/* Estilos generales */
+.centro1{
+    
+    display: grid;
+    place-items: center;
+
+}
+#esconder2{
+    margin-top: 1%;
+
+}
+.hg{
+    border-radius: 20px;
+    background-color:  rgba(0, 0, 0, 0.933);
+    width: 130%%;
+}
+
+
+.cal{
+    display: flex;
+    gap: 0.2rem;
+    margin-top: 10px;
+    margin-left:10px ;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+#resulta{
+    width: 100%;
+    text-align: center;
+}
+
+.cal2{
+    display: grid;
+    place-items: center;
+    
+}
+

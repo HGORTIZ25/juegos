@@ -1,0 +1,85 @@
+.resultado{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1px black ;
+    width: 33.99%;
+    text-align: center;
+    border: none;
+    background: linear-gradient(to top, black, blue);
+    border-radius: 15px;
+    color: #fff;
+}
+#resultado2{
+    margin-top: -1%;
+}
+#contenido{
+    width: 150%;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    margin-top: 1%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.933);
+     margin-top: 1%;
+ 
+
+}
+.boton{
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    gap: 3rem;
+}
+.button{
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to top, blue,black);
+    color: #fff;
+    
+    
+    transition: all.9s;
+}
+.button:hover{
+    scale: 1.2;
+}
+.juegos{
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to top, blue,black);
+    color: #fff;
+    transition: all.9s;
+}
+.juegos:hover{
+    scale: 1.1;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+input{
+    border-radius: 5px;
+    color: #fff;
+    width: 50%;
+    height: 30px;
+    border:none;
+    background: linear-gradient(to top, blue, black);
+}
+.center{ 
+   
+    
+    display: grid;
+    place-items: center;
+}
+#ocultar{
+    margin-top: 1%;
+}

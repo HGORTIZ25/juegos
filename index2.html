@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="java2.css">
+   <title>Document</title>
+   <style>
+    
+    #ocultar{
+        display:none;
+    }
+    nav{
+        background-color: black;
+    }
+   </style>
+</head>
+<body id="color">
+
+    <nav>  
+ <button class="juegos" id="boton" onclick="mostrar();">frio tibio caliente</button>
+    </nav>
+
+ 
+
+   
+    <button class="juegos" id="boton" onclick="contenido();">modo oscuro</button>
+<div id="ocultar">
+    
+    <div class="center">
+        <form action="" id="contenido">
+            <h1> frio tibio caliente</h1>
+            
+                <div class=""><h1 id="resultado2">0</h1></div>
+            
+            <input type="number" name="numero" id="numero" placeholder="escria un numero del 1 al 100">
+            <label for="numero"></label> <br>
+           <div class="boton">
+            <button class="button" type="button" onclick="jugar()">iniciar</button>
+            <button class="button" type="button" onclick="limpiar1()">limpiar</button>
+           </div>
+            
+                <div class="resultado">
+                    <h1 id="resultado1">Resultado</h1>
+                </div> <br>
+                <button class="button" id="boton" onclick="esconder();">Ocultar </button>
+                
+        </form>
+    </div>
+    
+</div>
+<script>
+    function mostrar(){
+        document.getElementById("ocultar").style.display= "block"
+    }
+    function esconder(){
+        document.getElementById("ocultar").style.display= "none"
+    }function esconder(){
+        document.getElementById("ocultar").style.backgroundColor = "none"
+    }
+     
+</script>
+
+        
+<script src="java2.js"></script>
+</body>
+</html>

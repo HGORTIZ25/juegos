@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="java2.css">
+    <link rel="stylesheet" href="piedra papel y tijera.css">
+    <link rel="stylesheet" href="caculadora.css">
+    <title>Document</title>
+    <style>
+        #triki{
+            display: none;
+        }
+        #resultado2{
+            display: none;
+        }
+        body{
+            background-image: url(1);
+        }
+         #esconder1{
+            display:none;
+        }
+    
+        #ocultar{
+            
+            display:none;
+       
+        }
+
+        #esconder2{
+            display:none;
+        }
+        #padre{ 
+            margin-left: 0;
+           display: flex;
+           
+           justify-content: center;
+          flex-flow: row wrap-reverse;
+          gap:10rem;
+       
+  
+    
+            
+            
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            gap:1rem;
+        }
+
+        h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+
+  margin: 10px 0;
+}
+
+.board {
+  display: grid;
+  border-radius: 15PX;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+ 
+  padding: 5px;
+}
+
+
+.cell { border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background:linear-gradient(to top, blue,black);
+  color:  rgb(179, 255, 0);;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+  position: relative;
+}
+
+
+.cell:hover {
+  background:linear-gradient(to top, rgb(245, 10, 135),rgb(243, 240, 240));
+}
+
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.botonestriki{
+    background:linear-gradient(to top, blue,black);
+  color:rgb(179, 255, 0);
+ border: 1px black;
+border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.turn-indicator {
+
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+ color: rgb(179, 255, 0);
+}
+.centrotriki{
+    
+    margin-top:1% ;
+    display: grid;
+    place-items: center;
+   
+}
+.abc{
+width: 100%;
+ background-color: black;
+border-radius: 15px;
+}
+
+
+.botonestriki:hover {
+    background:linear-gradient(to top, rgb(245, 10, 135),rgb(243, 240, 240));
+}
+
+
+
+
+
+       </style>
+</head>
+<body>
+
+<div class="medio" id="medio" > 
+    <div>
+        <div class="modos">
+        <button id="modo1"  class="juegos" id="boton" onclick="modoOscuro()">   &#127769 </button>
+        <h1> JUEGOS CON HTM ,CSS, JS </h1>
+        
+            
+        <button id="modo" class="juegos" id="boton" onclick="modoClaro()"> &#127774</button>
+        
+        </div>
+    </div>
+</div>      
+    <br>
+    <nav >  
+        <button class="botonestriki" id="boton" onclick="mostrar1();"><img src="piedra.jpg" alt=""></button>
+        <button class="botonestriki" id="boton" onclick="mostrar2();"><img src="calculadora.jpg" alt=""></button>
+        <button class="botonestriki" id="boton" onclick="mostrar();"><img src="frio caliente.jpg" alt=""></button>
+        <button class="botonestriki" id="boton" onclick="mostrartriki();"><img src="triki.jpg"></button>
+         
+
+           </nav>
+
+           <div id="padre">
+            <div class="centro">
+                <div id="esconder1">
+                 <div id="contenido1">
+                     <form action="" id="contenido2">
+                         
+                         <input type="text" name="texto" id="jugador" placeholder="piedra papel o tijera">
+                         <label for="jugador
+                         "></label> <br>
+                     </form >
+                     <div class="centro12" >
+                         <div class="user">
+                        <p>usuario</p>
+                         <h1 id="usuario"></h1>
+                         </div>
+                         <p>vs</p>
+                          <div class="user">
+                         <p>maquina</p>
+                          <h1 id="maquina"> </h1>
+                          
+                         </div>
+                          <div class="user">
+                             <p> resultado</p>
+                             <h1 id="resultado1"></h1>
+     
+                          </div>
+                     </div>
+                     <button class="button" onclick="jugar()">jugar</button> <br> <br>
+                         <button class="button" id="boton" onclick="esconder1();">Ocultar </button>
+                 </div>
+             </div>   
+         </div>
+        
+     
+     
+     
+     
+     
+     
+     
+     
+     
+        
+     <div id="esconder2">
+         <div class="centro1">
+             <div class="hg" id="hg">
+             <form name="calculadora"  class="form">
+                 <div class="cal2">
+                     <div class="cal">
+             
+                         <input type="textfield" id="resulta" name="ans" id="" autocomplete="off" readonly>
+                     </div>
+                 </div>
+                  <div class="cal">
+                     <input type="button" class="cal1" value="7" onclick="document.calculadora.ans.value+='7'">
+                     <input type="button" class="cal1"  value="8" onclick="document.calculadora.ans.value+='8'">
+                     <input type="button"  class="cal1" value="9" onclick="document.calculadora.ans.value+='9'">
+                     <input type="button" v value="+" onclick="document.calculadora.ans.value+='+'">
+         
+                     </div>
+                 
+         
+                     <div class="cal">
+                     <input type="button" class="cal1"  value="4" onclick="document.calculadora.ans.value+='4'">
+                     <input type="button" class="cal1"  value="5" onclick="document.calculadora.ans.value+='5'">
+                     <input type="button" class="cal1"  value="6" onclick="document.calculadora.ans.value+='6'">
+                     <input type="button" class="cal1"   value="-" onclick="document.calculadora.ans.value+='-'">
+         
+                     </div >
+         
+         
+                     <div class="cal">
+                         <input type="button" class="cal1"  value="4" onclick="document.calculadora.ans.value+='4'">
+                         <input type="button" class="cal1"  value="5" onclick="document.calculadora.ans.value+='5'">
+                         <input type="button" class="cal1"  value="6" onclick="document.calculadora.ans.value+='6'">
+                         <input type="button" class="cal1"  value="-" onclick="document.calculadora.ans.value+='-'">
+         
+                     </div>
+                    
+                   
+         
+                     <div class="cal">
+                         <input type="button" class="cal1"  value="1" onclick="document.calculadora.ans.value+='7'">
+                         <input type="button" class="cal1"  value="2" onclick="document.calculadora.ans.value+='7'">
+                         <input type="button" class="cal1"  value="3" onclick="document.calculadora.ans.value+='7'">
+                         <input type="button" class="cal1"  value="x" onclick="document.calculadora.ans.value+='*'">
+                     </div>
+                    
+                   
+                     <div class="cal">
+                         <input type="button" class="cal1"  value="0" onclick="document.calculadora.ans.value+='0'">
+                         <input type="reset" class="cal1"  value="c" onclick="reset">
+                         <input type="button" class="cal1"  value="=" onclick="document.calculadora.ans.value=eval(document.calculadora.ans.value)">
+                         <input type="button" class="cal1"  value="/" onclick="document.calculadora.ans.value+='/'">
+         
+                     </div>
+         
+                     
+                 </form>
+                 <button class="button" id="boton" onclick="guardar1();">Ocultar </button>
+             </div>
+            </div>
+     </div>
+        
+    
+        
+     
+     
+     
+     
+     
+     
+     
+     
+     
+                   
+         
+         <div id="ocultar">
+             
+             <div class="center">
+                 <div action="" id="contenido">
+             
+                         <div class=""><h1 id="resultado2">0</h1></div>
+                     
+                     <input type="number" name="numero" id="numero" placeholder="escria un numero del 1 al 100">
+                     <label for="numero"></label> <br>
+                    <div class="boton">
+                     <button class="button" type="button" onclick="iniciar()">jugar</button>
+                     <button class="button" type="button" onclick="limpiar()">limpiar</button>
+                    </div>
+                     
+                         <div class="resultado">
+                             <h1 id="resultado3">Resultado</h1>
+                         </div> <br>
+                         <div style="display: flex; gap: 2rem;" >
+                         <button  class="juegos1" id="boton" onclick="mostrara();">mostrar numero</button>
+                         <button class="juegos1" id="boton" onclick="guardara();">Ocultar numero  </button>
+                        </div>
+                        <br>
+                        <button class="button" id="boton" onclick="guardar();">Ocultar </button>
+                 </div>
+                 
+             </div>
+             
+         </div>
+
+
+
+
+          
+
+
+
+
+
+           <div class="centrotriki" id="triki">
+        <div class="abc" id="abc">
+          <div class="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+          </div>
+          <div class="controls">
+            <button class="botonestriki" id="reset-button">Reiniciar partida</button>
+            <button class="button" id="boton" onclick="escondertriki();">Ocultar </button> 
+          </div>
+          
+          <div class="turn-indicator">
+            Turno de <span id="player-turn">Jugador 1</span>
+          </div>
+            
+          <div  class="turn-indicator">
+            <h1>resulado:</h1>
+            <h3 id="a"></h3>
+          </div>
+          
+        </div>
+          
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script >
+        function mostrartriki(){
+        document.getElementById("triki").style.display= "block"
+    }
+    function escondertriki(){
+            document.getElementById("triki").style.display= "none"
+       
+        }
+   
+
+
+
+
+        const cells = document.querySelectorAll('[data-cell]');
+let currentPlayer = 'X';
+
+const playerTurnIndicator = document.getElementById('player-turn');
+const resetButton = document.getElementById('reset-button');
+
+resetButton.addEventListener('click', resetGame);
+
+cells.forEach(cell => {
+  cell.addEventListener('click', handleCellClick);
+});
+
+function handleCellClick(e) {
+  const cell = e.target;
+  if (cell.textContent === '') {
+    cell.textContent = currentPlayer;
+    if (checkWin(currentPlayer)) {
+      if (currentPlayer === 'X') {
+        document.getElementById("a").innerHTML=("jugador 1 gano") 
+      } else {
+        document.getElementById("a").innerHTML=("jugador 2 gano") 
+      }
+      resetGame();
+    } else if (isBoardFull()) {
+     document.getElementById("a").innerHTML=("empate")
+      resetGame();
+    } else {
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      playerTurnIndicator.textContent = currentPlayer === 'X' ? 'Jugador 1' : 'Jugador 2';
+    }
+  }
+} 
+
+function checkWin(player) {
+  const winConditions = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+    [0, 4, 8], [2, 4, 6] 
+  ];
+
+  for (const condition of winConditions) {
+    const [a, b, c] = condition;
+    if (cells[a].textContent === player && cells[b].textContent === player && cells[c].textContent === player) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isBoardFull() {
+  return Array.from(cells).every(cell => cell.textContent !== '');
+}
+
+function resetGame() {
+  cells.forEach(cell => {
+    cell.textContent = '';
+    cell.classList.remove('winning'); 
+  });
+  currentPlayer = 'X';
+  playerTurnIndicator.textContent = 'Jugador 1'; 
+}
+
+function mostrara(){
+        document.getElementById("resultado2").style.display= "block"
+    }
+    function guardara(){
+            document.getElementById("resultado2").style.display= "none"
+       
+        }
+   
+ 
+
+function limpiar(){
+    document.getElementById("numero").reset();
+    
+}
+
+function iniciar(){
+    
+    let num= parseInt(document.getElementById("numero").value);
+    let a=Math.floor(Math.random()*100+1);
+    
+    
+    
+    
+
+    document.getElementById("resultado2").innerHTML=(`${a}`);
+    if(num==a){
+        document.getElementById("resultado3",).innerHTML=(`Ganaste🥇num:${a}`) ;
+    }else if(Math.abs(num-a)<=10){
+        document.getElementById("resultado3",).innerHTML=(" cliente🔥 ") ;
+    }else if(num<=0){
+        document.getElementById("resultado3").innerHTML=("se congelo🧊 ") ;
+    }else if(num>=101){
+        document.getElementById("resultado3").innerHTML=("se congelo🧊 ") ;
+    }else{
+        document.getElementById("resultado3").innerHTML=("frio ☃️") ;
+    }
+    
+}
+
+
+
+
+        function mostrar(){
+            document.getElementById("ocultar").style.display= "block"
+        }
+        function guardar(){
+            document.getElementById("ocultar").style.display= "none"
+       
+        }
+
+
+
+
+
+
+
+
+        function limpiar(){
+        document.getElementById("jugador").reset();
+        
+    }
+        function jugar(){
+            let a=["piedra","papel","tijera"]
+            let usuario=(document.getElementById("jugador").value);
+            let indiceAleatorio=Math.floor(Math.random()*a.length);
+            let maquina=a[indiceAleatorio]
+            if(maquina===usuario){
+                document.getElementById("resultado",).innerHTML=(`empate`) ;
+        }else if ((maquina==="piedra" && usuario==="tijera") || (maquina ==="papel" && usuario==="piedra") ||
+        (maquina ==="tijera" && usuario==="papel")){
+            document.getElementById("resultado1",).innerHTML=(`perdiste`) ;
+        }else{
+            document.getElementById("resultado1",).innerHTML=(`ganaste`) ;
+            
+        }
+            document.getElementById("maquina",).innerHTML=(`${maquina}`) ;
+            document.getElementById("usuario",).innerHTML=(`${usuario}`) ;
+        }
+        
+        function mostrar1(){
+        document.getElementById("esconder1").style.display= "block"
+    }
+    function esconder1(){
+        document.getElementById("esconder1").style.display= "none"
+    }
+
+    function modoOscuro(){
+        document.body.style.background='#111';
+        document.body.style.color='#fff';
+        
+    }
+    function modoClaro(){
+        document.body.style.background='#fff';
+        document.body.style.color='#000';
+    }   
+    function mostrar2(){
+            document.getElementById("esconder2").style.display= "block"
+        }
+        function guardar1(){
+            document.getElementById("esconder2").style.display= "none"
+       
+        }
+        function modoOscuro(){
+        document.getElementById("hg").style.background="grey"
+        document.body.style.background='#111';
+
+        document.getElementById("contenido1").style.background='grey';
+        document.body.style.background='#111';
+
+        document.getElementById("contenido").style.background='grey';
+        document.body.style.background='#111';
+
+        document.getElementById("abc").style.background='grey';
+        document.body.style.background='#111';
+
+       
+
+        }
+       
+        function modoClaro(){
+        document.getElementById("hg").style.background=' #111';
+        document.body.style.background='#fff';
+
+        document.getElementById("contenido1").style.background=' #111';
+        document.body.style.background='#fff';
+
+      
+        document.getElementById("contenido").style.background=' #111';
+        document.body.style.background='#fff';
+
+
+        document.getElementById("abc").style.background=' #111';
+        document.body.style.background='#fff';
+
+
+
+       
+       
+        }
+        
+    </script>
+    
+            
+   
+
+    
+</body>
+</html>

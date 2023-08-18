@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        #esconder1{
+            display:none;
+        }
+        
+       </style>
+
+
+
+</head>
+<body>
+
+    <button class="juegos" id="boton" onclick="mostrar1();">piedra papel y  tijera</button>
+
+<div id="esconder1">
+    <div id="contenido1">
+        <form action="" id="contenido">
+            
+            <input type="text" name="texto" id="jugador" placeholder="piedra papel o tijera">
+            <label for="jugador
+            "></label>
+            <button onclick="limpiar()">borrar</button>
+            <button class="button" id="boton" onclick="esconder1();">Ocultar </button>
+            
+        </form>
+        <div>
+            <h1 id="usuario">maquina</h1> <p>vs</p> <h1 id="maquina">usuario </h1> <h1 id="resultado"></h1>
+            
+            <button onclick="jugar()">jugar</button>
+            
+        </div>
+    </div>
+</div>   
+    
+       <script>
+    function limpiar(){
+        document.getElementById("contenido").reset();
+        
+    }
+        function jugar(){
+            let a=["piedra","papel","tijera"]
+            let usuario=(document.getElementById("jugador").value);
+            let indiceAleatorio=Math.floor(Math.random()*a.length);
+            let maquina=a[indiceAleatorio]
+            if(maquina===usuario){
+                document.getElementById("resultado",).innerHTML=(`empate`) ;
+        }else if ((maquina==="piedra" && usuario==="tijera") || (maquina ==="papel" && usuario==="piedra") ||
+        (maquina ==="tijera" && usuario==="papel")){
+            document.getElementById("resultado",).innerHTML=(`perdiste`) ;
+        }else{
+            document.getElementById("resultado",).innerHTML=(`ganaste`) ;
+            
+        }
+            document.getElementById("maquina",).innerHTML=(`${maquina}`) ;
+            document.getElementById("usuario",).innerHTML=(`${usuario}`) ;
+        }
+        
+        function mostrar1(){
+        document.getElementById("esconder1").style.display= "block"
+    }
+    function esconder1(){
+        document.getElementById("esconder1").style.display= "none"
+    }
+
+
+
+
+       </script>
+
+</body>
+</html>
